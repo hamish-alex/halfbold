@@ -1,0 +1,19 @@
+{
+
+  "manifest_version": 2,
+  "name": "HalfBold",
+  "version": "1.0",
+
+  "description": "Bolds the first half of the text for speed reading.",
+
+  "icons": {
+    "48": "/icons/hblogo",
+    "96": "/icons/hblogo96"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["HalfBold.js"]
+    }
+  ]
