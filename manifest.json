@@ -9,13 +9,15 @@
     "icons": {
       "48": "icons/hblogo96.png"
     },
+
+    "permissions": [
+      "activeTab",
+      "contextMenus"
+    ],
   
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["bolding.js"]
-      }
-    ]
+    "background": {
+      "scripts": ["halfbold.js"]
+    }
   
   }
   
