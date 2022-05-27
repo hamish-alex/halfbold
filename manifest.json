@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "HalfBold",
+    "version": "1.0",
+  
+    "description": "Bolds the first half of each word",
+  
+    "icons": {
+      "48": "icons/hblogo96.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["bolding.js"]
+      }
+    ]
+  
+  }
+  
