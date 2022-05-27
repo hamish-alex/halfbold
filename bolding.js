@@ -49,6 +49,10 @@ function traverseAndReplace(element) {
     for (let node of element.childNodes) {
         switch (node.nodeType) {
             case Node.ELEMENT_NODE:
+                // Ignore some tags
+                if (["style", "script", "img", "a", "table"].includes(node.tagName.toLowerCase())) {
+                    continue;
+                }
                 traverseAndReplace(node);
                 break;
             case Node.TEXT_NODE:
